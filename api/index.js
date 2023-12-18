@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from 'cors';
 import './db/database.js'
-import UserRouer from "./routes/user.js";
+import UserRouter from "./routes/user.js";
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors({credentials: true}))
 
 //using routes
-app.use("/api/user", UserRouer)
+app.use("/api/user", UserRouter)
 
 
 app.listen(port, () => {
